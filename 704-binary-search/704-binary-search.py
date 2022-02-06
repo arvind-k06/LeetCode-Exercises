@@ -5,7 +5,7 @@ class Solution:
         r = n-1
         
         while(l<=r):
-            m = abs(r-l)
+            m = abs(r+l)//2
             if nums[m] == target:
                 return m
             elif target < nums[m]:
