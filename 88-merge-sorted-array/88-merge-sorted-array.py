@@ -6,7 +6,7 @@ class Solution:
         k = 0
         i = 0
         j = 0
-        print(nums1, nums2)
+        # print(nums1, nums2)
 
         while(i<m and j<n):
             print(i,j)
