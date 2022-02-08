@@ -3,8 +3,6 @@ class Solution:
         arr = []
         n = len(nums)
         r = (n-k)%n
-        if n == 1:
-            return 1
         while(r<n):
             arr.append(nums[r])
             r+=1
