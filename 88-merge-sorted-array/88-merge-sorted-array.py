@@ -9,7 +9,7 @@ class Solution:
         # print(nums1, nums2)
 
         while(i<m and j<n):
-            print(i,j)
+            # print(i,j)
             if nums1[i] < nums2[j]:
                 res.append(nums1[i])
                 i+=1
