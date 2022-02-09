@@ -10,7 +10,7 @@ class Solution:
         arr = []
         for i in mat:
             arr.extend(i)
-        arr = arr[::-1]
+        # arr = arr[::-1]
 #         print(arr)
         
         
@@ -19,10 +19,11 @@ class Solution:
 #                 print(i,j, mat[i][j])
                 
         a = []
-        for i in range(r):
-            t = []
-            for j in range(c):
-                t.append(arr.pop())
+        for i in range(0, len(arr), c):
+            a.append(arr[i:i+c])
+#             t = []
+#             for j in range(c):
+#                 t.append(arr.pop())
             
-            a.append(t)
+#             a.append(t)
         return a
