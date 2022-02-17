@@ -9,12 +9,11 @@ class Solution:
         p1 = head
         p2 = head
         
-        while(p2 and p2.next and p2.next.next):
+        while(p2 and p2.next):
             p1 = p1.next
             p2 = p2.next.next
-        
-        # print(p1,p2.next)
-        if p2.next != None:
-            return p1.next
+
+#         if p2.next != None:
+#             return p1.next
         return p1
         
