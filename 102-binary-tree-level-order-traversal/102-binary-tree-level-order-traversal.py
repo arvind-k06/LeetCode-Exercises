@@ -4,17 +4,17 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+from collections import defaultdict
 class Solution:
     
         
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:
             return []
-        d ={}
+        d = defaultdict(list)
         def traverse(node, level):
             if node:
-                if level not in d:
-                    d[level] = []
                 d[level].append(node.val)
                 traverse(node.left, level+1)
                 traverse(node.right, level+1)
