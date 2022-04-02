@@ -7,26 +7,28 @@ class Node:
         self.left = None
         self.right = None
 '''
-from collections import defaultdict
+from collections import defaultdict, deque
 class Solution:
     #Function to store the zig zag order traversal of tree in a list.
     
     def zigZagTraversal(self, root):
         if not root:
             return []
-        d = defaultdict(list)
+        # dq = deque([])
+        d = defaultdict(deque)
         def traverse(node, level):
             if node:
-                d[level].append(node.data)
+                if level%2 == 1:
+                    d[level].appendleft(node.data)
+                else:
+                    d[level].append(node.data)
                 traverse(node.left, level+1)
                 traverse(node.right, level+1)
         traverse(root, 0)
         ret = []
         for i in d:
-            if i%2 == 1:
-                ret.extend(d[i][::-1])
-            else:
-                ret.extend(d[i])
+            
+            ret.extend(d[i])
         return ret
             
             
