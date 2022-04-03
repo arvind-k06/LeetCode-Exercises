@@ -5,8 +5,7 @@ class Solution:
         pmax = 0
         
         for i in prices:
-            if i<lmin: lmin = i
-            if i-lmin > pmax: pmax = i-lmin
-                
+            lmin = min(i, lmin)
+            pmax = max(pmax, i-lmin)
         return pmax
         
