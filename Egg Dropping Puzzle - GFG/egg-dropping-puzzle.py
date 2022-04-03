@@ -5,7 +5,7 @@ class Solution:
     #Function to find minimum number of attempts needed in 
     #order to find the critical floor.
     def eggDrop(self,K, N):
-        M = 300 # big enough number
+        M = 500 # big enough number
         dp = [[0 for j in range(K+1)] for i in range(M+1)]
         # Initialization 1 --> no move no floor --> dp[0][*] = 0
         # Initialization 2 --> no egg no floor --> dp[*][0] = 0
