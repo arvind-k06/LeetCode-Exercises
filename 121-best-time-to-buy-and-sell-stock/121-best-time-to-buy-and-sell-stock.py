@@ -4,13 +4,9 @@ class Solution:
         lmin = prices[0]
         pmax = 0
         
-        for i in range(1, len(prices)):
-            if lmin>prices[i]:
-                lmin = prices[i]
-            
-            if prices[i]-lmin>pmax:
-                pmax = prices[i]-lmin
+        for i in prices:
+            if i<lmin: lmin = i
+            if i-lmin > pmax: pmax = i-lmin
                 
-        
         return pmax
         
