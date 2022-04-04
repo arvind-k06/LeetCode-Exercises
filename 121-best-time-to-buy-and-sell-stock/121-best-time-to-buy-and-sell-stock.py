@@ -7,5 +7,7 @@ class Solution:
         for i in prices:
             lmin = min(i, lmin)
             pmax = max(pmax, i-lmin)
+            
+            print(pmax)
         return pmax
         
