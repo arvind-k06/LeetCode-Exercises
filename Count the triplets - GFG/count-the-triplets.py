@@ -1,6 +1,26 @@
 #User function Template for python3
 class Solution:
 	def countTriplet(self, arr, n):
+	    
+	    arr.sort()
+	    c=0
+	    for k in range(n,2,-1):
+	        i = k-1
+	        r = i-1
+	        l = 0
+	        
+	        while l<r:
+	            
+	            ss = arr[l]+arr[r]
+	            if ss == arr[i]:
+	                c+=1
+	                l+=1
+	                r-=1
+	            elif ss < arr[i]:
+	                l+=1
+	            else:
+	                r-=1
+	    return c
 		# code here
 		s = set(arr)
 		c=0
