@@ -16,8 +16,8 @@ class Solution:
             return 0
         l = self.height(root.left)
         r = self.height(root.right)
+        return 1+max(l,r)
         
-        return 1+ max(l,r)
 
 
 #{ 
