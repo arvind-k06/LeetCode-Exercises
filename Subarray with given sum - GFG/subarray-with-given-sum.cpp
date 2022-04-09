@@ -17,7 +17,7 @@ class Solution
         long su;
         i = j = su = 0;
         
-        while(i<n && j<n){
+        while(i<n && j<=n){
             
             if(su == s){
                 return {i+1, j};
