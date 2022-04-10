@@ -2,7 +2,23 @@
 
 class Solution:
     def minOperation(self, n):
-        # code here 
+        # code here
+        dp = [0]*(n+1)
+        if n<4:
+            return n
+        dp[1] = 1
+        dp[2] = 2
+        dp[3] = 3
+        
+        for i in range(4, n+1):
+            if i%2 == 1:
+                dp[i] = 1+dp[i-1]
+                
+            else:
+                dp[i] = 1+dp[i//2]
+                
+        return dp[n]
+        
         res = 0
         if n<2:
             return n
