@@ -1,5 +1,17 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
+        res = 0
+        curr = 0
+        far = 0
+        
+        for i in range(len(nums)-1):
+            curr = max(curr, i+nums[i])
+            
+            if i == far:
+                res+=1
+                far=curr
+        return res
+            
         memo={}
         def min_jumps(index):
             if index>=len(nums)-1:
